@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include THREE.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
+    <!-- Include GLTFLoader -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/loaders/GLTFLoader.js"></script>
+    <!-- Include OrbitControls -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/controls/OrbitControls.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Sorry, We Cannot Connect Your Call</title>
+    
+</head>
+<body>
+  <div class="navbar">
+    <div class="searchBar"> 
+    <h2>Sorry, We Cannot Connect Your Call<a href="about.html"><i class="fa fa-fw fa-search searchBtn"></i></a></h2>
+    </div>
+  </div>
+
+  <div id="welcomeModal" class="modal2" data-animation="slideInOutTop">
+    <div class="modal2-header">
+      <p>Welcome to Your iPhone</p>
+    </div>
+    <div class="modal2-content">
+      <p>Phones have come a long way since the first telephone was invented in 1870, helping us make millions of 
+        connections around the world over the course of many decades. With great advancements in technological innovation, 
+        our phones are capable of making more than just long-distance calls, they give us unfettered access to information at 
+        the click of a button.<br>
+        <br>
+        In the dawn of the digital age, it's time to go even further, uncover every bit of information, and think differently 
+        about what really connects us to each other.
+        </p>
+    </div>
+    <div class="modal2-footer">
+      <div class="modal2-btn">
+        <button id="begin-btn">Begin</button>
+      </div>
+    </div>
+</div>
+<div id="overlay" class="modal2-dialog"></div> <!-- Overlay -->
+
+
+<button class="sidebar-toggle" onclick="toggleSidebar()">Toggle Sidebar</button>
+    <div class="sidebar">
+      <h3>Instructions</h3>
+        <div class="instructions"> 
+      <p>Click on the 'Take a closer look' button then click and drag to rotate the phone</p>
+      <p>Scroll to zoom in and out and click 'Return to normal view' to reset the phone to its original position</p>
+      <p>Click on the keypad buttons to explore the phone further</p>
+      <p>Clicking on the search icon will take you to more information about this project</p>
+      </div>
+    </div>
+
+    
+
+    <!-- Initially hidden info box -->
+    <div id="infoBox" class="modal" style="display: none;">
+      <div class="modal-content"></div>
+      <button onclick="document.getElementById('infoBox').style.display='none';">X</button>
+  </div>
+
+
+    <!-- Your custom script file -->
+    <script src="js/modal.js"></script>
+    <script src="js/SWCCYC.js"></script>
+</body>
+</html>

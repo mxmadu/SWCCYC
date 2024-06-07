@@ -1,0 +1,300 @@
+html{
+    background-color: black;
+    /* background-image: url("cobaltMine.jpeg"); */
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  
+  canvas {
+    display: block;
+  }
+  
+  
+  
+  .navbar {
+    width: 100%;
+    background-color: #2b2a2a;
+    overflow: auto;
+  }
+  
+  .searchBar{
+    width: 50%;
+    margin: auto;
+  
+  }
+  
+  .searchBtn{
+    color:#007bff;
+  }
+  
+  
+  
+  h2{
+    text-align: center;
+    border: 2px;
+    border-style: solid;
+    border-radius: 40px;
+    background-color: white;
+    font-size: 28px;
+  
+  }
+  
+  /* Add this CSS to your stylesheet.css */
+  .main-content {
+    position: absolute;
+    top: 60px; /* Adjust based on the header height */
+    left: 0;
+    width: 100%;
+    height: calc(100% - 60px); /* Adjust based on the header height */
+    overflow: hidden; /* Ensure no scrollbars */
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  /* Create two equal columns that sits next to each other */
+  .column {
+    flex: 50%;
+    padding: 20px;
+  }
+
+  .imageHolder img{
+    width: 80%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+  }
+
+  .imageHolder{   
+    border-style: dashed;
+    border-color: white;
+  }
+
+  .notificationBox{
+    background-color: #fff; /* White background */
+    border: 1px solid #ccc; /* Light gray border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    z-index: 1000;
+    font-family: Rubik, sans-serif;
+  }
+
+  h3{
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+.notificationBox .notification-header{
+    font-size: 26px; /* Header font size */
+  font-weight: 600; 
+  margin-bottom: 10px; /* Space below header */
+  text-align: center;
+}
+
+.notificationBox .notification-content{
+    font-size: 16px; /* Content font size */
+    margin-bottom: 20px; /* Space below content */
+    font-weight: 500;
+
+}
+
+  .notificationBox .notification-footer {
+    display: flex; /* Use flexbox to arrange buttons */
+    /* justify-content: center; */
+    /* align-items: center; */
+    border-top: 1px solid #ccc; /* Thin gray line above buttons */
+    padding-top: 10px; /* Space above buttons */
+    font-weight: 400;
+    
+  }
+
+  .notificationBox .notification-footer button{
+    flex: 1; /* Buttons take equal space */
+  padding: 10px 20px; /* Button padding */
+  font-size: 20px; /* Button font size */
+  border: none; /* Remove default border */
+  background-color: transparent; /* Transparent background */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+  text-align: center;
+  
+  }
+
+  .notificationBox .notification-footer button:hover{
+    background-color: #e6e6e6; /* Light gray overlay on hover */
+  }
+
+  .l-btn-container{
+    margin: 0;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    border-right: 1px solid #ccc; /* Thin gray line between buttons */
+    text-align: center;
+
+  }
+
+  .r-btn-container{
+    margin: 0;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+
+    
+  }
+  .notificationBox .notification-footer .left-button{
+    color: #ff4d4d; /* Red text */
+    margin: auto;
+
+    
+  }
+
+  .notificationBox .notification-footer .right-button{
+    color: #007bff; /* Blue text */
+
+  }
+
+  /* * {box-sizing:border-box} */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 450px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@media screen and (max-width: 768px) {
+  h2, h3 {
+    font-size: 24px; /* Reduce font size */
+  }
+
+  .navbar {
+    text-align: center;
+    width: 125%; 
+    margin: 5px;
+  }
+
+  .searchBar {
+    width: 100%; /* Make input and button full width */
+    margin: 5px 0; /* Add spacing between input and button */
+  }
+
+  .row {
+    display: block;
+}
+.column {
+    flex: 100%;
+    padding: 10px 0;
+    left: 50%;
+    width: 125%;
+}
+.imageHolder img {
+    width: 100%;
+}
+
+ 
+}

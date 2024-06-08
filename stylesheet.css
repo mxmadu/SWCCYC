@@ -349,7 +349,7 @@ div.content {
   .sidebar-toggle {
     display: block;
     font-size: 16px; /* Slightly increase font size for better tap targets */
-    width: 100%;
+    width: 50%;
   }
 
   .navbar {

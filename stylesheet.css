@@ -292,6 +292,7 @@ div.content {
      width: 50%;
     height: auto;
     z-index: 10;
+    display: block;
   }
 
   .sidebar-toggle {

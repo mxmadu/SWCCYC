@@ -286,7 +286,9 @@ div.content {
 
   .sidebar {
     display: none;
-    z-index: 4;
+    width: 50%;
+    height: auto;
+    z-index: 10;
   }
 
   .sidebar-toggle {

@@ -268,7 +268,7 @@ div.content {
 
 @media screen and (max-width: 768px) {
   h2, h3, .instructions {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   canvas {

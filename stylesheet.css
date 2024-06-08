@@ -287,17 +287,19 @@ div.content {
 
   .sidebar {
     display: none;
+    height: auto;
+    width: fit-content;
   }
 
   .sidebar-toggle {
     display: block;
     font-size: 16px;
-    width: 100%;
+    width: fit-content;
   }
 
   .navbar {
     text-align: center;
-    width: 100%;
+    width: fit-content;
     margin: 5px;
   }
 

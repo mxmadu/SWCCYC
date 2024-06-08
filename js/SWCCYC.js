@@ -267,7 +267,7 @@ scene.add(bottomLight);
 let phoneModel; // This will store the GLTF scene once loaded
 
 const gltfLoader = new THREE.GLTFLoader();
-gltfLoader.load('iphone14promax.gltf', function (gltf) {
+gltfLoader.load('https://mxmadu.github.io/SWCCYC/iphone14promax.gltf', function (gltf) {
   gltf.scene.traverse(function (child) {
     if (child.isMesh) {
       const texture = child.material.map; // assuming the map is already loaded

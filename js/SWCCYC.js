@@ -81,7 +81,7 @@ const keyHeaders = {
 };
 
 let takeCloserLook = false; // State for the "Take a closer look" feature
-const clickAudio = new Audio('/end-call.mp3'); 
+const clickAudio = new Audio('https://mxmadu.github.io/SWCCYC/end-call.mp3'); 
 clickAudio.preload = 'auto';
 
 

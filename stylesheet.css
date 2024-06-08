@@ -268,7 +268,7 @@ div.content {
 @media screen and (max-width: 768px) {
 
   body{
-    width: 50%;
+    width: 30vh;
   }
     
   h2, h3, .instructions {

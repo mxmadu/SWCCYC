@@ -1,17 +1,8 @@
 html{
   background-color: black;
-  /* background-image: url("cobaltMine.jpeg"); */
-  /* filter: blur(8px);
-  -webkit-filter: blur(8px); */
 
   /* Full height */
   width: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -4;
 
 }
 
@@ -196,10 +187,9 @@ h3{
 .sidebar {
   margin: 0;
   padding: 0;
-  width: 200px;
+  width: 100%
   background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
+  position: absolute;
   overflow: hidden;
 }
 
@@ -324,56 +314,54 @@ div.content {
 }
 
 @media screen and (max-width: 768px) {
-
-  h2, h3,.instructions {
-    font-size: 24px; /* Reduce font size */
+    
+  h2, h3, .instructions {
+    font-size: 20px;
   }
 
-
-  canvas{
+  canvas {
     margin: 0;
     display: block;
-    /* height: auto; Allow canvas to adjust height automatically */
-   
-
   }
 
   div.content {
-    margin-left: 0; /* Remove the margin */
+    margin-left: 0;
   }
 
   .sidebar {
-    display: none; /* Hide the sidebar on small screens */
+    display: none;
+  }
+
+  .sidebar .active{
+     width: 50%;
+    height: auto;
+    z-index: 10;
+    display: block;
   }
 
   .sidebar-toggle {
     display: block;
-    font-size: 16px; /* Slightly increase font size for better tap targets */
-    width: 127%;
+    font-size: 16px;
+    width: fit-content;
   }
 
   .navbar {
     text-align: center;
-    width: 120%; 
+    width: fit-content;
     margin: 5px;
   }
 
   .searchBar {
-    width: 100%; /* Make input and button full width */
-    margin: 5px 0; /* Add spacing between input and button */
+    width: 100%;
+    margin: 5px 0;
   }
 
-  .navbar,.searchBar {
-    padding: 10px; /* Increase padding for easier tapping */
+  .navbar, .searchBar {
+    padding: 10px;
   }
 
-  .closer-look-button{
-    position: absolute;
+  .closer-look-button {
     left: 80%;
     width: 35%;
   }
-
-
-
-
 }

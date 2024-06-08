@@ -165,7 +165,6 @@ h3 {
   background-color: #f1f1f1;
   position: relative;
   overflow: hidden;
-  display: column;
 }
 
 .instructions {
@@ -287,8 +286,8 @@ div.content {
 
   .sidebar {
     display: none;
-    height: auto;
-    width: fit-content;
+    position: relative;
+    width: 100%;
   }
 
   .sidebar-toggle {

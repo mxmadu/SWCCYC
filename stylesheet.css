@@ -164,8 +164,8 @@ h3 {
   width: 100%;
   background-color: #f1f1f1;
   position: relative;
-  height: auto;
   overflow: hidden;
+  display: column;
 }
 
 .instructions {

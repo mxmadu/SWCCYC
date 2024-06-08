@@ -1,10 +1,18 @@
-html {
-  width: 100%
+html{
   background-color: black;
+  /* background-image: url("cobaltMine.jpeg"); */
+  /* filter: blur(8px);
+  -webkit-filter: blur(8px); */
+
+  /* Full height */
+  width: 100%;
+
+  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -4;
+
 }
 
 body {
@@ -20,36 +28,53 @@ canvas {
   width: 100%;
 }
 
+/* #sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  box-sizing: border-box;
+} */
+
 .navbar {
   width: 100%;
   background-color: #2b2a2a;
   overflow: hidden;
 }
 
-.searchBar {
+.searchBar{
   width: 50%;
   margin: auto;
+
 }
 
-.searchBtn {
-  color: #007bff;
+.searchBtn{
+  color:#007bff;
 }
 
-h2 {
+
+
+h2{
   text-align: center;
-  border: 2px solid;
+  border: 2px;
+  border-style: solid;
   border-radius: 40px;
   background-color: white;
   font-size: 28px;
+
 }
 
+/* Add this CSS to your stylesheet.css */
 .main-content {
   position: absolute;
-  top: 60px;
+  top: 60px; /* Adjust based on the header height */
   left: 0;
   width: 100%;
-  height: calc(100% - 60px);
-  overflow: hidden;
+  height: calc(100% - 60px); /* Adjust based on the header height */
+  overflow: hidden; /* Ensure no scrollbars */
 }
 
 .modal {
@@ -62,6 +87,7 @@ h2 {
   border: 1px solid black;
   border-radius: 5px;
   z-index: 1001;
+  width: auto;
   max-width: 80%;
 }
 
@@ -71,11 +97,14 @@ h2 {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+
 }
 
 .modal button {
   cursor: pointer;
 }
+
+
 
 .closer-look-button {
   position: absolute;
@@ -83,6 +112,10 @@ h2 {
   top: 30%;
   padding: 10px 20px;
   font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -93,29 +126,30 @@ h2 {
 .closer-look-button:hover {
   background-color: #0056b3;
 }
-
 #infoBox {
   position: absolute;
   max-width: 600px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 20px;
+  word-wrap: break-word;
+  background-color: #fff; /* White background */
+  border: 1px solid #ccc; /* Light gray border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the box */
   z-index: 1000;
-  font-family: "Rubik", sans-serif;
+  font-family: Rubik, sans-serif;
 }
 
 #infoBox .modal-header {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-size: 18px; /* Header font size */
+  font-weight: 600; 
+  margin-bottom: 10px; /* Space below header */
   text-align: center;
 }
 
 #infoBox .modal-content {
-  font-size: 14px;
-  margin-bottom: 20px;
+  font-size: 14px; /* Content font size */
+  margin-bottom: 20px; /* Space below content */
+
 }
 
 #infoBox .modal-content b {
@@ -123,76 +157,85 @@ h2 {
 }
 
 #infoBox .modal-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
+  display: flex; /* Use flexbox to arrange buttons */
+  justify-content: space-between; /* Space between buttons */
+  align-items: center; /* Center items vertically */
+  border-top: 1px solid #ccc; /* Thin gray line above buttons */
+  padding-top: 10px; /* Space above buttons */
   font-weight: 400;
 }
 
 #infoBox .modal-footer button {
-  flex: 1;
-  padding: 10px 20px;
-  font-size: 14px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  flex: 1; /* Buttons take equal space */
+  padding: 10px 20px; /* Button padding */
+  font-size: 14px; /* Button font size */
+  border: none; /* Remove default border */
+  background-color: transparent; /* Transparent background */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
 }
 
 #infoBox .modal-footer .cancel-button {
-  color: #ff4d4d;
-  border-right: 1px solid #ccc;
+  color: #ff4d4d; /* Red text */
+  border-right: 1px solid #ccc; /* Thin gray line between buttons */
 }
 
 #infoBox .modal-footer .try-again-button {
-  color: #007bff;
+  color: #007bff; /* Blue text */
 }
 
 #infoBox .modal-footer button:hover {
-  background-color: #e6e6e6;
+  background-color: #e6e6e6; /* Light gray overlay on hover */
 }
 
-h3 {
+h3{
   text-align: center;
 }
 
+/* The side navigation menu */
 .sidebar {
   margin: 0;
   padding: 0;
-  width: 50%;
+  width: 200px;
   background-color: #f1f1f1;
-  position: relative;
+  position: fixed;
+  height: 100%;
   overflow: hidden;
 }
 
-.instructions {
+.instructions{
   margin: 5%;
 }
 
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
   margin-left: 200px;
   padding: 1px 16px;
   height: 1000px;
 }
 
-#welcomeModal {
+#welcomeModal{
   position: absolute;
   left: 25%;
   bottom: 25%;
   max-width: 800px;
   max-height: 80vh;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 20px;
+  /* background: var(--white); */
+  overflow: hidden;
+  cursor: default;
+  word-wrap: break-word;
+  background-color: #fff; 
+  border: 1px solid #ccc; /* Light gray border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the box */
   z-index: 2;
-  font-family: "Rubik", sans-serif;
+  font-family: Rubik, sans-serif;
+ 
 }
 
-.modal2-dialog {
+
+ .modal2-dialog{
   position: fixed;
   top: 0;
   bottom: 0;
@@ -202,40 +245,50 @@ div.content {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
-  display: none;
+  display: none; /* Initially hidden */
   z-index: 1;
+  /* transition: all 0.5s ease-in; */
 }
 
-#welcomeModal .modal2-header {
-  font-size: 26px;
-  font-weight: 600;
-  margin-bottom: 10px;
+#welcomeModal .modal2-header{
+  font-size: 26px; /* Header font size */
+  font-weight: 600; 
+  margin-bottom: 10px; /* Space below header */
   margin-top: 5px;
   text-align: center;
+  /* position: relative */
 }
 
-#welcomeModal .modal2-content {
-  font-size: 16px;
-  margin-bottom: 20px;
+#welcomeModal .modal2-content{
+  /* transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: relative; */
+  font-size: 16px; /* Content font size */
+  margin-bottom: 20px; /* Space below content */
   font-weight: 500;
 }
 
-#welcomeModal .modal2-footer {
-  font-size: 16px;
-  margin-bottom: 20px;
-  font-weight: 500;
-  position: relative;
+#welcomeModal .modal2-footer{
+    font-size: 16px; /* Content font size */
+    margin-bottom: 20px; /* Space below content */
+    font-weight: 500;
+    position:relative;
 }
 
-#welcomeModal .modal2-btn {
+#welcomeModal .modal2-btn{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#welcomeModal .modal2-btn button {
+#welcomeModal .modal2-btn button{
   padding: 10px 20px;
   font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -245,9 +298,13 @@ div.content {
   margin-bottom: 10px;
 }
 
-#welcomeModal .modal2-btn button:hover {
+
+#welcomeModal .modal2-btn button:hover{
   background-color: #0056b3;
+
 }
+
+/* Style for the button */
 
 .sidebar-toggle {
   display: none;
@@ -261,63 +318,62 @@ div.content {
   text-align: center;
 }
 
+/* Show the sidebar when it's toggled */
 .sidebar.active {
   display: block;
 }
 
 @media screen and (max-width: 768px) {
 
-  body{
-    width: 30vh;
-  }
-    
-  h2, h3, .instructions {
-    font-size: 20px;
+  h2, h3,.instructions {
+    font-size: 24px; /* Reduce font size */
   }
 
-  canvas {
+
+  canvas{
     margin: 0;
     display: block;
+    /* height: auto; Allow canvas to adjust height automatically */
+   
+
   }
 
   div.content {
-    margin-left: 0;
+    margin-left: 0; /* Remove the margin */
   }
 
   .sidebar {
-    display: none;
-  }
-
-  .sidebar .active{
-     width: 50%;
-    height: auto;
-    z-index: 10;
-    display: block;
+    display: none; /* Hide the sidebar on small screens */
   }
 
   .sidebar-toggle {
     display: block;
-    font-size: 16px;
-    width: fit-content;
+    font-size: 16px; /* Slightly increase font size for better tap targets */
+    width: 127%;
   }
 
   .navbar {
     text-align: center;
-    width: fit-content;
+    width: 120%; 
     margin: 5px;
   }
 
   .searchBar {
-    width: 100%;
-    margin: 5px 0;
+    width: 100%; /* Make input and button full width */
+    margin: 5px 0; /* Add spacing between input and button */
   }
 
-  .navbar, .searchBar {
-    padding: 10px;
+  .navbar,.searchBar {
+    padding: 10px; /* Increase padding for easier tapping */
   }
 
-  .closer-look-button {
+  .closer-look-button{
+    position: absolute;
     left: 80%;
     width: 35%;
   }
+
+
+
+
 }

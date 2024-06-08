@@ -349,12 +349,12 @@ div.content {
   .sidebar-toggle {
     display: block;
     font-size: 16px; /* Slightly increase font size for better tap targets */
-    width: 50%;
+    width: 127%;
   }
 
   .navbar {
     text-align: center;
-    width: 50%; 
+    width: 120%; 
     margin: 5px;
   }
 
@@ -372,8 +372,5 @@ div.content {
     left: 80%;
     width: 35%;
   }
-
-
-
 
 }

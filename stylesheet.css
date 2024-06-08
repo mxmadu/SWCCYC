@@ -288,7 +288,7 @@ div.content {
     display: none;
   }
 
-  .sidebar active{
+  .sidebar .active{
      width: 50%;
     height: auto;
     z-index: 10;
